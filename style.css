@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
+    grid-template-areas: 
+    'dashboard header header'
+    'dashboard projects announcements'
+    'dashboard projects trending'
+    ;
+}
+
+.header {
+    background-color: red;
+    grid-area: header;
+}
+
+.dashboard {
+    background-color: blue;
+    grid-area: dashboard;
+}
+
+.projects {
+    background-color: pink;
+    grid-area: projects;
+}
+
+.announcements {
+    background-color: purple;
+    grid-area: announcements;
+}
+
+.trending {
+    background-color: green;
+    grid-area: trending;
+}
