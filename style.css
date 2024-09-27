@@ -31,7 +31,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     gap: 10%;
-    padding: 0 5%;
+    padding: 0 25px;
 }
 
 form.search {
@@ -55,6 +55,7 @@ form.search {
     border: none;
     flex: 1;
     height: 1.5rem;
+    max-width: 700px;
 }
 
 .profile-container {
@@ -108,8 +109,13 @@ img.svg {
     font-size: 1.5rem;
 }
 
-.header-bot ul {
+ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-bot ul {
     display: flex;
     justify-content: right;
     gap: 10%;
@@ -126,8 +132,43 @@ img.svg {
 }
 
 .dashboard {
-    background-color: blue;
+    background-color: var(--bluetheme);
     grid-area: dashboard;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    height: 50px;
+    filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(322deg) brightness(105%) contrast(105%);
+}
+
+.dashboard ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    gap: 20px;
+}
+
+.dashboard ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard ul li img{
+    height: 15px;
+    filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(322deg) brightness(105%) contrast(105%);
 }
 
 .projects {
