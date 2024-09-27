@@ -1,3 +1,8 @@
+:root {
+    --offwhite: rgb(253, 253, 253);
+    --bluetheme: rgb(113, 113, 218);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -15,8 +20,109 @@ html, body {
 }
 
 .header {
-    background-color: red;
+    background-color: var(--offwhite);
     grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-top, .header-bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    padding: 0 5%;
+}
+
+form.search {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex: 1;
+}
+
+.search-button {
+    background-color: inherit;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    background-color: var(--bluetheme);
+    border-radius: 25px;
+    border: none;
+    flex: 1;
+    height: 1.5rem;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+img.svg {   
+    height: 20px;
+}
+
+.profile-image {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    min-width: 50px;
+}
+
+.profile-image img{
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.header-bot .profile-bot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-bot .profile-image{
+    height: 75px;
+    width: 75px;
+    min-width: 75px;
+}
+
+.profile-text {
+    font-weight: bold;
+    line-height: .2rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.profile-text .name-text {
+    font-size: 1.5rem;
+}
+
+.header-bot ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 10%;
+    flex: 1;
+}
+
+.header ul li button {
+    background-color: var(--bluetheme);
+    color: white;
+    border-style: none;
+    height: 1.5rem;
+    width: 10vw;
+    border-radius: 25px;
 }
 
 .dashboard {
