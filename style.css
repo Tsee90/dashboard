@@ -64,6 +64,12 @@ form.search {
     flex: 1;
     height: 1.5rem;
     max-width: 700px;
+    padding-left: 20px;
+}
+
+input:focus {
+    border: 2px solid var(--bluetheme);
+    outline: none;
 }
 
 .profile-container {
@@ -187,7 +193,7 @@ ul {
 .projects {
     background-color: var(--graywhite);
     grid-area: projects;
-    padding: 5%;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -245,11 +251,46 @@ ul {
 }
 
 .announcements {
-    background-color: purple;
     grid-area: announcements;
+    padding-top: 25px;
 }
 
 .trending {
-    background-color: green;
     grid-area: trending;
+}
+
+.announcements, .trending {
+    background-color: var(--graywhite);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements-box, .trending-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--offwhite);
+    min-height: 200px;
+    max-width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px var(--shadow);
+}
+
+.announcements-box > div {
+    font-size: .9rem;
+    padding: 7px 0;
+}
+
+.announcements-box > div:nth-child(1),
+.announcements-box > div:nth-child(2) {
+    border-bottom: 1px solid gray;
+}
+
+.announcement-title {
+    font-weight: bold;
+}
+.announcement-text {
+    color: gray;
 }
